@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "degiro-api": "^1.0.4"
+  }
+}

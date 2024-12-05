@@ -1,0 +1,1598 @@
+2024-12-04 15:01:46,814 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:01:46,815 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:01:46,815 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:04:17,480 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:04:17,487 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:04:17,487 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:04:50,714 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:04:50,714 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:04:50,715 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:04:57,799 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'B3FA7AFE8DA00F40D3AE36E72E914E8A.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-04 15:04:57,799 - JSON_Grabber - INFO - Connected successfully
+2024-12-04 15:05:01,834 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:05:02,189 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:32:24,139 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:32:24,140 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:32:24,140 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:32:35,667 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:32:35,667 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:32:35,667 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:32:44,241 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '1741AB1ACA972313352DF2D028DCB0C4.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-04 15:32:44,242 - JSON_Grabber - INFO - Connected successfully
+2024-12-04 15:32:46,666 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:32:46,980 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:36:05,760 - degiro_connector.trading.actions.action_connect - CRITICAL - HTTPSConnectionPool(host='trader.degiro.nl', port=443): Max retries exceeded with url: /login/secure/login/totp (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002293B9DD550>: Failed to resolve 'trader.degiro.nl' ([Errno 11001] getaddrinfo failed)"))
+2024-12-04 15:36:05,760 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:36:12,916 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '9921BB8EF7FFFE29E1F5D643D472031A.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-04 15:36:12,916 - JSON_Grabber - INFO - Connected successfully
+2024-12-04 15:36:21,004 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:36:21,004 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:36:21,005 - Generator - WARNING - Value not found for TTMPRCFPS
+2024-12-04 15:36:21,005 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:36:21,005 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:36:21,005 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-04 15:36:21,005 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:36:21,013 - Generator - INFO - PDF generated for Intel Corp
+2024-12-04 15:37:40,798 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:38:24,339 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'F0E0FB573ACB0FA7AC2682F9BFD0A70A.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-04 15:38:24,339 - JSON_Grabber - INFO - Connected successfully
+2024-12-04 15:38:52,696 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '264BC69DA57959915AB7BDECAC76426A.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-04 15:38:52,697 - JSON_Grabber - INFO - Connected successfully
+2024-12-04 15:39:20,227 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:39:20,228 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:39:20,229 - Generator - WARNING - Value not found for TTMPRCFPS
+2024-12-04 15:39:20,229 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:39:20,229 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:39:20,229 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-04 15:39:20,229 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:39:20,236 - Generator - INFO - PDF generated for Intel Corp
+2024-12-04 15:39:20,686 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:39:20,687 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:39:20,687 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:39:20,693 - Generator - INFO - PDF generated for NVIDIA Corp
+2024-12-04 15:39:21,120 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:39:21,120 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:39:21,121 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:39:21,128 - Generator - INFO - PDF generated for Thales SA
+2024-12-04 15:42:35,216 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:42:35,216 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:42:35,216 - Generator - WARNING - Value not found for TTMPRCFPS
+2024-12-04 15:42:35,217 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:42:35,217 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-04 15:42:35,217 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-04 15:42:35,217 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:42:35,224 - Generator - INFO - PDF generated for Intel Corp
+2024-12-04 15:42:35,723 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:42:35,724 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:42:35,724 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:42:35,730 - Generator - INFO - PDF generated for NVIDIA Corp
+2024-12-04 15:42:36,150 - Generator - INFO - Calculating financial metrics...
+2024-12-04 15:42:36,150 - Generator - INFO - Calculating valuation metrics...
+2024-12-04 15:42:36,151 - Generator - INFO - Calculating efficiency metrics...
+2024-12-04 15:42:36,157 - Generator - INFO - PDF generated for Thales SA
+2024-12-04 15:42:57,111 - JSON_Grabber - INFO - Logged out successfully
+2024-12-04 15:43:06,598 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:43:06,598 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:43:06,598 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:43:12,355 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:43:12,355 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:43:12,355 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:43:21,369 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:43:21,369 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:43:21,369 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:43:37,222 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:43:37,222 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:43:37,222 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:43:49,939 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:43:49,939 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:43:49,939 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:44:25,133 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:44:25,133 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:44:25,134 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:44:42,902 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:44:42,903 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:44:42,903 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:44:50,077 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:44:50,077 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:44:50,078 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:45:05,690 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:45:05,690 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:45:05,690 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:47:26,465 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:47:26,465 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:47:26,465 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:48:36,328 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:48:36,328 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:48:36,328 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:49:05,065 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:49:05,065 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:49:05,065 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 15:49:16,234 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 15:49:16,234 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 15:49:16,234 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 16:03:22,810 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 16:03:22,810 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 16:03:22,811 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 16:03:32,803 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 16:03:32,803 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 16:03:32,803 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 16:05:57,728 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 16:05:57,728 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 16:05:57,728 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-04 16:06:25,948 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-04 16:06:25,948 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-04 16:06:25,948 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 08:51:16,429 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 08:51:16,430 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 08:51:16,431 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 08:51:47,247 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 08:51:47,248 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 08:51:47,248 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 08:59:23,507 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 08:59:23,507 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 08:59:23,508 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:04:49,901 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 3, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:04:49,901 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:04:49,901 - JSON_Grabber - ERROR - Degiro error details: login_failures=3 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:05:18,726 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 2
+2024-12-05 09:05:20,629 - dotenv.main - WARNING - Python-dotenv could not parse statement starting at line 2
+2024-12-05 09:05:34,764 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'DF965C40D2B3516471986F63687041DB.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:05:34,764 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:05:37,629 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:05:38,031 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:08:36,927 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '4C0ADBF5E3AB83942622FA37CB1F7474.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:08:36,928 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:09:03,290 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:09:03,292 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:09:03,293 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:09:03,312 - Generator - INFO - PDF generated for easyJet plc
+2024-12-05 09:09:16,272 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:09:16,273 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:09:16,274 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:09:16,289 - Generator - INFO - PDF generated for easyJet plc
+2024-12-05 09:09:54,341 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:16:04,526 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'A91F961BAF72371C762C99A303A9B508.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:16:04,526 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:16:14,160 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:16:14,486 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:22:32,420 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:22:32,420 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:22:32,420 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:22:42,353 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '4D7D927147C9FFA4B6CB4BD009A964E9.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:22:42,353 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:23:47,482 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:23:47,483 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:23:47,484 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:23:47,510 - Generator - INFO - PDF generated for Howmet Aerospace Inc
+2024-12-05 09:23:52,598 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:23:53,283 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:33:00,446 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:33:00,446 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:33:00,446 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:33:09,562 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '827B05AD4809D9A3C6A20E258DC7405E.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:33:09,563 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:33:23,743 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:33:23,744 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:33:23,745 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:33:23,763 - Generator - INFO - PDF generated for Koninklijke Ahold Delhaize NV
+2024-12-05 09:33:28,096 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:33:28,617 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:37:11,241 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:37:11,242 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:37:11,242 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:37:17,991 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:37:17,991 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:37:17,991 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:37:44,114 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'A7344917DE18802F9B855A7C6315B4A6.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:37:44,114 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:45:01,251 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:45:35,356 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'C2B830774A75A9C4D07FDF9FE1FE4730.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:45:35,357 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:45:35,357 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 09:46:22,067 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:46:22,069 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:46:22,071 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:46:22,090 - Generator - INFO - PDF generated for Palantir Technologies Inc
+2024-12-05 09:46:24,760 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:46:25,073 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:47:42,637 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:47:42,637 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:47:42,637 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:47:42,638 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 09:51:20,549 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 09:51:20,549 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 09:51:20,549 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 09:51:20,550 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 09:51:37,404 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'F51C74E315D306982E28E400DD407518.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:51:37,405 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:51:37,405 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 09:51:59,465 - Generator - INFO - Calculating financial metrics...
+2024-12-05 09:51:59,467 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 09:51:59,468 - Generator - WARNING - Value not found for TTMPRCFPS
+2024-12-05 09:51:59,468 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 09:51:59,468 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 09:51:59,469 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-05 09:51:59,469 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 09:51:59,485 - Generator - INFO - PDF generated for Intel Corp
+2024-12-05 09:58:17,835 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:58:21,989 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 09:58:35,864 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'F76E9719BBC0BA71873C1018CD2BC216.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 09:58:35,864 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 09:58:35,864 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 09:59:12,923 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 09:59:13,343 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:06:10,631 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:06:39,291 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:06:39,291 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:06:39,292 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:06:39,292 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:06:41,496 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:06:52,296 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:06:52,296 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:06:52,296 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:06:52,297 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:06:57,578 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:07:04,790 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '80E1934FCBA120C2DF3D764832F62ECE.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:07:04,790 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:07:04,790 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:08:00,575 - Generator - INFO - Calculating financial metrics...
+2024-12-05 10:08:00,576 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 10:08:00,578 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 10:08:00,595 - Generator - INFO - PDF generated for Palantir Technologies Inc
+2024-12-05 10:08:01,327 - Generator - INFO - Calculating financial metrics...
+2024-12-05 10:08:01,329 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 10:08:01,330 - Generator - WARNING - Value not found for TTMPRCFPS
+2024-12-05 10:08:01,331 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 10:08:01,331 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 10:08:01,332 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-05 10:08:01,332 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 10:08:01,347 - Generator - INFO - PDF generated for Intel Corp
+2024-12-05 10:08:18,065 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:19:24,145 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:19:51,879 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:19:51,879 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:19:51,880 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:19:51,880 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:19:56,102 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:19:59,972 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:19:59,972 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:19:59,972 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:19:59,973 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:20:02,738 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:20:08,366 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '022D94F1FC4ED28C5CEB6AFA32363C15.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:20:08,366 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:20:08,367 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:20:12,053 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:20:12,479 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:22:52,502 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:22:59,459 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:22:59,459 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:22:59,459 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:22:59,460 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:23:02,190 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:23:06,457 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '8F00E8022789CDFC4D814E7771634B57.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:23:06,457 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:23:06,457 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:23:14,019 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:23:14,341 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:23:49,595 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:23:55,273 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': 'D0D199995738BFA92CC64B5C4E0FFB63.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:23:55,273 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:23:55,273 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:23:59,587 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:30:31,706 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:30:41,515 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '347272A7206F69EF826280414AF35F5E.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:30:41,515 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:30:41,515 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:30:59,649 - Generator - INFO - Calculating financial metrics...
+2024-12-05 10:30:59,650 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 10:30:59,652 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 10:30:59,652 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-05 10:30:59,653 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 10:30:59,669 - Generator - INFO - PDF generated for MARA Holdings Inc
+2024-12-05 10:31:05,783 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:31:09,071 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 10:41:14,028 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:41:14,028 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:41:20,711 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:41:20,711 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:41:20,712 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:41:20,712 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:41:20,712 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:41:20,712 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:41:20,714 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:41:20,714 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:41:20,715 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:41:20,715 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:41:20,715 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:41:20,715 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:41:20,716 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:41:20,716 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:41:20,716 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:41:20,716 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:41:20,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:41:20,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:41:20,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:41:20,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:41:20,726 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:41:20,726 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:41:20,726 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:41:20,726 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:41:20,728 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:41:20,728 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:41:20,728 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:41:20,728 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:41:20,729 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:41:20,729 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:41:20,736 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:41:20,736 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:41:20,737 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:41:20,737 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:41:20,738 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:41:20,738 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:41:20,743 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:41:20,743 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:41:20,743 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:41:20,743 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:41:20,744 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:41:20,744 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:41:20,744 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:41:20,744 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:41:20,745 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:41:20,750 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:41:20,750 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:41:20,751 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:41:20,751 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:41:20,752 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:41:20,752 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:41:20,752 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:41:20,752 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:41:20,753 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:41:20,754 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:41:20,755 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:41:20,755 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:41:20,756 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:41:20,756 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:41:21,869 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 10:41:21,869 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 10:41:21,871 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:41:21,871 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:41:21,871 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:41:21,871 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:41:21,871 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:41:21,871 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:41:21,872 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:41:21,872 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:55:46,468 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:55:46,468 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:58:44,170 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:58:44,170 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:58:56,755 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:58:56,755 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:58:56,756 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:58:56,756 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:58:56,756 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:58:56,756 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:58:56,759 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:58:56,759 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:58:56,760 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:58:56,760 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:58:56,760 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:58:56,760 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:58:56,761 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:58:56,761 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:58:56,761 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:58:56,761 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:58:56,768 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:58:56,768 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:58:56,769 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:58:56,769 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:58:56,771 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:58:56,771 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:58:56,772 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:58:56,772 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:58:56,773 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:58:56,773 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:58:56,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:58:56,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:58:56,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:58:56,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:58:56,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:58:56,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:58:56,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:58:56,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:58:56,784 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:58:56,784 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:58:56,790 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:58:56,790 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:58:56,790 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:58:56,790 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:58:56,791 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:58:56,791 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:58:56,791 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:58:56,791 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:58:56,792 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:58:56,792 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:58:56,792 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:58:56,792 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:58:56,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:58:56,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:58:56,798 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:58:56,798 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:58:56,799 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:58:56,799 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:58:56,799 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:58:56,799 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:58:56,800 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:58:56,800 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:58:56,800 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:58:56,800 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:58:56,801 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:58:56,801 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:58:56,801 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:58:56,801 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:58:56,802 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:58:56,803 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:58:56,803 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:58:56,804 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:58:56,804 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:58:57,924 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 10:58:57,924 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 10:58:57,926 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:58:57,926 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 10:58:57,926 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:58:57,926 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 10:58:57,927 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:58:57,927 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 10:58:57,927 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:58:57,927 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 10:59:00,566 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:59:00,566 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:59:11,305 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:59:11,306 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:59:11,307 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 10:59:11,307 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:59:11,307 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 10:59:11,308 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:59:11,308 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 10:59:12,368 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 10:59:12,368 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 10:59:12,369 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:59:12,369 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 10:59:12,369 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:59:12,369 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 10:59:12,369 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 10:59:12,369 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:00:48,536 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:00:48,536 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:00:48,537 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:00:48,537 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:00:49,627 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1?sessionId=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:00:49,627 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1?sessionId=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:00:49,627 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:00:49,627 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:00:49,645 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:00:49,645 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:00:49,974 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1?sessionId=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:00:49,974 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1?sessionId=1537255B8536BAE5E8735108E385533B.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:00:49,974 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:00:49,974 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:04:35,193 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:04:35,193 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:04:47,961 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:04:47,961 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:04:47,961 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:04:47,961 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:04:47,962 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:04:47,962 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:04:47,964 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:04:47,964 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:04:47,965 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:04:47,965 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:04:47,965 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:04:47,965 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:04:47,966 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:04:47,966 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:04:47,966 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:04:47,966 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:04:47,973 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:04:47,973 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:04:47,974 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:04:47,974 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:04:47,977 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:04:47,977 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:04:47,977 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:04:47,977 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:04:47,979 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:04:47,988 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:04:47,988 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:04:47,989 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:04:47,989 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:04:47,989 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:04:47,989 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:04:47,994 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:04:47,994 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:04:47,995 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:04:47,996 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:04:47,996 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:04:47,996 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:04:47,996 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:04:47,997 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:04:47,997 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:04:48,001 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:04:48,001 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:04:48,002 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:04:48,002 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:04:48,003 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:04:48,003 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:04:48,003 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:04:48,003 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:04:48,004 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:04:48,004 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:04:48,004 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:04:48,004 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:04:48,005 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:04:48,006 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:04:48,006 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:04:48,006 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:04:48,006 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:04:48,008 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:04:48,008 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:04:50,900 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:04:50,900 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:04:50,901 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:04:50,901 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:04:50,902 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:04:50,902 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:04:50,902 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:04:50,902 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:04:50,902 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:04:50,902 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:07:05,771 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:07:05,771 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:07:12,550 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:07:12,550 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:07:12,551 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:07:12,551 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:07:12,551 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:07:12,551 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:07:12,554 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:07:12,555 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:07:12,555 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:07:12,555 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:07:12,555 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:07:12,562 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:07:12,562 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:07:12,562 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:07:12,562 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:07:12,565 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:07:12,565 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:07:12,566 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:07:12,566 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:07:12,568 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:07:12,568 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:07:12,568 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:07:12,568 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:07:12,569 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:07:12,569 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:07:12,581 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:07:12,581 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:07:12,581 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:07:12,581 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:07:12,582 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:07:12,582 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:07:12,589 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:07:12,589 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:07:12,590 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:07:12,590 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:07:12,591 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:07:12,592 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:07:12,592 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:07:12,592 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:07:12,592 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:07:12,597 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:07:12,597 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:07:12,598 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:07:12,598 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:07:12,598 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:07:12,598 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:07:12,599 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:07:12,599 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:07:12,599 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:07:12,599 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:07:12,600 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:07:12,601 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:07:12,601 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:07:12,601 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:07:12,601 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:07:12,601 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:12,601 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:12,603 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:07:12,603 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:07:13,716 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:07:13,716 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:07:13,718 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:07:13,718 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:07:13,719 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:07:13,719 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:07:13,719 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:07:13,719 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:07:32,667 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:32,667 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:32,953 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1?sessionId=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:07:32,953 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1?sessionId=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:07:32,953 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:07:32,953 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:07:32,972 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:32,972 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:07:33,252 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1?sessionId=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:07:33,252 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1?sessionId=0B3F224C69B662A23331870145F804B0.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:07:33,253 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:07:33,253 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:09:43,726 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:09:43,726 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:09:57,824 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:09:57,824 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:09:57,825 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:09:57,825 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:09:57,825 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:09:57,825 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:09:57,828 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:09:57,828 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:09:57,828 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:09:57,828 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:09:57,829 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:09:57,836 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:09:57,836 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:09:57,837 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:09:57,837 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:09:57,840 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:09:57,840 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:09:57,840 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:09:57,840 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:09:57,842 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:09:57,850 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:09:57,850 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:09:57,851 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:09:57,851 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:09:57,852 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:09:57,852 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:09:57,858 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:09:57,858 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:09:57,858 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:09:57,858 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:09:57,859 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:09:57,860 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:09:57,860 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:09:57,861 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:09:57,861 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:09:57,871 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:09:57,871 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:09:57,872 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:09:57,872 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:09:57,873 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:09:57,873 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:09:57,873 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:09:57,873 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:09:57,874 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:09:57,875 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:09:57,875 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:09:57,875 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:09:57,875 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:09:57,876 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:09:57,876 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:09:57,876 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:09:57,876 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:09:57,877 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:09:57,877 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:10:00,001 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:10:00,001 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:10:00,002 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:10:00,002 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:10:00,003 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:10:00,003 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:10:00,003 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:10:00,003 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:12:37,704 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:12:37,704 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:12:37,705 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:12:37,705 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:12:46,818 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1?sessionId=4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:12:46,818 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1?sessionId=4691B2729C7E66961329F56FCAAA6812.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:12:46,819 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:12:46,819 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:19:08,506 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:19:08,506 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:19:33,669 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:19:33,669 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:19:33,670 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:19:33,670 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:19:33,670 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:19:33,670 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:19:33,674 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:19:33,674 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:19:33,674 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:19:33,674 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:19:33,675 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:19:33,675 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:19:33,675 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:19:33,675 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:19:33,676 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:19:33,676 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:19:33,684 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:19:33,684 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:19:33,685 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:19:33,685 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:19:33,689 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:19:33,689 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:19:33,690 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:19:33,690 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:19:33,692 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:19:33,692 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:19:33,692 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:19:33,692 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:19:33,693 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:19:33,693 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:19:33,703 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:19:33,703 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:19:33,704 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:19:33,704 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:19:33,704 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:19:33,704 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:19:33,712 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:19:33,712 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:19:33,713 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:19:33,713 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:19:33,713 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:19:33,713 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:19:33,714 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:19:33,714 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:19:33,714 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:19:33,714 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:19:33,715 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:19:33,715 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:19:33,715 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:19:33,715 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:19:33,721 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:19:33,721 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:19:33,722 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:19:33,722 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:19:33,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:19:33,723 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:19:33,724 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:19:33,724 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:19:33,724 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:19:33,724 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:19:33,725 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:19:33,725 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:19:33,725 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:19:33,725 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:19:33,726 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:19:33,726 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:19:33,726 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:19:33,726 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:19:33,727 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:19:33,727 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:19:33,727 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:19:33,727 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:19:33,729 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:19:33,729 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:19:35,110 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:19:35,110 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:19:35,113 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:19:35,113 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:19:35,114 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:19:35,114 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:19:35,114 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:19:35,114 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:19:39,901 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:19:39,901 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:19:40,329 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=nz&limit=10&offset=0&productTypeId=1&sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:40,329 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=nz&limit=10&offset=0&productTypeId=1&sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:52,640 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:19:52,640 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:19:52,643 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:19:52,643 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:19:53,679 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/NZNZME0001S0?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:53,679 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/NZNZME0001S0?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:53,680 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:19:53,680 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:19:54,056 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/NZNZME0001S0?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:54,056 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/NZNZME0001S0?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:19:54,058 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:19:54,058 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:19:54,059 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:19:54,059 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:19:54,059 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:19:54,059 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:19:54,060 - Generator - WARNING - Value not found for AGROSMGN
+2024-12-05 11:19:54,060 - Generator - WARNING - Value not found for AGROSMGN
+2024-12-05 11:19:54,061 - Generator - WARNING - Value not found for TTMGROSMGN
+2024-12-05 11:19:54,061 - Generator - WARNING - Value not found for TTMGROSMGN
+2024-12-05 11:19:54,074 - Generator - INFO - PDF generated for NZME Ltd
+2024-12-05 11:19:54,074 - Generator - INFO - PDF generated for NZME Ltd
+2024-12-05 11:31:28,130 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:31:28,130 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:31:28,133 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:31:28,133 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:31:29,357 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:31:29,357 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1?sessionId=1086D819865C811C235AF7FF426C0616.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:31:29,359 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:31:29,359 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:31:34,266 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:31:34,266 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:31:44,379 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:31:44,379 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:31:44,380 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:31:44,380 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:31:44,381 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:31:44,381 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:31:44,385 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:31:44,385 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:31:44,385 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:31:44,385 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:31:44,386 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:31:44,386 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:31:44,386 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:31:44,386 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:31:44,387 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:31:44,387 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:31:44,396 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:31:44,396 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:31:44,396 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:31:44,396 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:31:44,401 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:31:44,401 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:31:44,402 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:31:44,402 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:31:44,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:31:44,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:31:44,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:31:44,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:31:44,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:31:44,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:31:44,416 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:31:44,416 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:31:44,417 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:31:44,417 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:31:44,418 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:31:44,418 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:31:44,425 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:31:44,425 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:31:44,425 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:31:44,425 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:31:44,426 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:31:44,426 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:31:44,426 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:31:44,426 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:31:44,427 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:31:44,427 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:31:44,428 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:31:44,428 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:31:44,428 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:31:44,428 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:31:44,434 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:31:44,434 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:31:44,435 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:31:44,435 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:31:44,436 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:31:44,436 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:31:44,437 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:31:44,437 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:31:44,437 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:31:44,437 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:31:44,438 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:31:44,438 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:31:44,438 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:31:44,438 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:31:44,439 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:31:44,439 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:31:44,439 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:31:44,439 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:31:44,440 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:31:44,440 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:31:44,440 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:31:44,440 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:31:44,442 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:31:44,442 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:31:45,639 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:31:45,639 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:31:45,641 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:31:45,641 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:31:45,641 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:31:45,641 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:31:45,641 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:31:45,641 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:31:45,642 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:31:45,642 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:31:52,311 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:31:52,311 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:32:04,207 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:32:04,208 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:32:04,209 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:32:04,210 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:32:04,211 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:32:04,212 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:32:04,212 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:32:04,212 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:32:04,212 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:32:04,212 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:32:04,212 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:32:04,213 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:32:04,213 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:32:05,098 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:32:05,098 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:32:05,100 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:32:05,100 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:32:05,100 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:32:05,100 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:32:05,100 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:32:05,100 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:32:09,592 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:32:09,592 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:32:10,747 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=kaya&limit=10&offset=0&productTypeId=1&sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:10,747 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=kaya&limit=10&offset=0&productTypeId=1&sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:18,031 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:32:18,031 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:32:18,033 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:32:18,033 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:32:18,034 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:32:18,034 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:32:18,040 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:32:18,040 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:32:18,089 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:32:18,089 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:32:18,089 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:32:18,089 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:32:18,090 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:32:18,090 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:32:18,102 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:32:18,102 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:32:18,103 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:32:18,103 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:32:19,022 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/JP3646400006?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:19,022 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/JP3646400006?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:19,024 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:32:19,024 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:32:19,347 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/JP3646400006?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:19,347 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/JP3646400006?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:32:19,350 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:32:19,350 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:32:19,351 - Generator - WARNING - Value not found for TTMFCFSHR
+2024-12-05 11:32:19,351 - Generator - WARNING - Value not found for TTMFCFSHR
+2024-12-05 11:32:19,351 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:32:19,351 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:32:19,352 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 11:32:19,352 - Generator - WARNING - Value not found for APRFCFPS
+2024-12-05 11:32:19,352 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-05 11:32:19,352 - Generator - WARNING - Value not found for TTMPRFCFPS
+2024-12-05 11:32:19,353 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:32:19,353 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:32:19,354 - Generator - WARNING - Value not found for Focf2Rev_TTM
+2024-12-05 11:32:19,354 - Generator - WARNING - Value not found for Focf2Rev_TTM
+2024-12-05 11:32:19,355 - Generator - WARNING - Value not found for AFocf2Rev
+2024-12-05 11:32:19,355 - Generator - WARNING - Value not found for AFocf2Rev
+2024-12-05 11:32:19,356 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:32:19,356 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:32:20,864 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 401 None
+2024-12-05 11:32:20,864 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 401 None
+2024-12-05 11:32:20,866 - Generator - WARNING - API request failed: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2024-12-05 11:32:20,866 - Generator - WARNING - API request failed: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2024-12-05 11:32:20,868 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:32:20,868 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:32:21,858 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 401 None
+2024-12-05 11:32:21,858 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 401 None
+2024-12-05 11:32:21,860 - Generator - ERROR - Unexpected error in API handling: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2024-12-05 11:32:21,860 - Generator - ERROR - Unexpected error in API handling: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2024-12-05 11:32:21,879 - Generator - INFO - PDF generated for Nakayama Steel Works, Ltd.
+2024-12-05 11:32:21,879 - Generator - INFO - PDF generated for Nakayama Steel Works, Ltd.
+2024-12-05 11:37:19,100 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:37:19,100 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:37:19,102 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:37:19,102 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:37:22,891 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:37:22,891 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:37:22,892 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:37:22,892 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:37:22,935 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:37:22,935 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:37:23,303 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:37:23,303 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1?sessionId=8797D308F24E6458BDC79EF90D90C5AE.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:37:23,303 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:37:23,303 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:37:47,849 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:37:47,849 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:37:47,851 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:37:47,851 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:37:47,852 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:37:47,852 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:37:47,858 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:37:47,858 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:37:47,905 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:37:47,905 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:37:47,906 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:37:47,906 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:37:47,906 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:37:47,906 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:38:16,841 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:38:16,841 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:38:16,843 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:38:16,843 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:38:16,844 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:38:16,844 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:38:16,850 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:38:16,850 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:38:16,899 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:38:16,899 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:38:16,899 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:38:16,899 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:38:16,900 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:38:16,900 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:38:37,150 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:38:37,150 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:38:37,152 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:38:37,152 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:38:37,153 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:38:37,153 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:38:37,160 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:38:37,160 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:38:37,208 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:38:37,208 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:38:37,209 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:38:37,209 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:38:37,209 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:38:37,209 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:39:29,462 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:39:29,462 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:39:29,463 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:39:29,463 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:39:29,464 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:39:29,464 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:39:29,472 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:39:29,472 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:39:29,520 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:39:29,520 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:39:29,520 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:39:29,520 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:39:29,521 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:39:29,521 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:06,201 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:06,201 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:06,202 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:06,202 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:06,203 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:06,203 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:06,209 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:06,209 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:06,259 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:06,259 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:06,259 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:06,259 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:06,260 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:06,260 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:21,014 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:21,014 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:21,016 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:21,016 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:21,017 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:21,017 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:21,024 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:21,024 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:21,071 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:21,071 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:21,072 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:21,072 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:21,073 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:21,073 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:36,361 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:36,361 - keyring.backend - DEBUG - Loading KWallet
+2024-12-05 11:44:36,362 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:36,362 - keyring.backend - DEBUG - Loading SecretService
+2024-12-05 11:44:36,363 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:36,363 - keyring.backend - DEBUG - Loading Windows
+2024-12-05 11:44:36,369 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:36,369 - win32ctypes.core.cffi - DEBUG - Loaded cffi backend
+2024-12-05 11:44:36,414 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:36,414 - keyring.backend - DEBUG - Loading chainer
+2024-12-05 11:44:36,415 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:36,415 - keyring.backend - DEBUG - Loading libsecret
+2024-12-05 11:44:36,416 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:44:36,416 - keyring.backend - DEBUG - Loading macOS
+2024-12-05 11:45:29,383 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:45:29,383 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:45:37,758 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:45:37,758 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:45:37,759 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:45:37,759 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:45:37,759 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:45:37,759 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:45:37,762 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:45:37,762 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:45:37,763 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:45:37,763 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:45:37,764 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:45:37,764 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:45:37,764 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:45:37,764 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:45:37,765 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:45:37,765 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:45:37,773 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:45:37,773 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:45:37,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:45:37,774 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:45:37,778 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:45:37,778 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:45:37,779 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:45:37,779 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:45:37,782 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:45:37,782 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:45:37,782 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:45:37,782 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:45:37,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:45:37,783 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:45:37,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:45:37,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:45:37,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:45:37,793 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:45:37,794 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:45:37,794 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:45:37,801 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:45:37,801 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:45:37,802 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:45:37,802 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:45:37,803 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:45:37,803 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:45:37,803 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:45:37,803 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:45:37,804 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:45:37,804 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:45:37,804 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:45:37,804 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:45:37,805 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:45:37,805 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:45:37,811 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:45:37,811 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:45:37,813 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:45:37,813 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:45:37,813 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:45:37,813 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:45:37,814 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:45:37,814 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:45:37,815 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:45:37,815 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:45:37,815 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:45:37,815 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:45:37,816 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:45:37,816 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:45:37,816 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:45:37,816 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:45:37,817 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:45:37,817 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:45:37,818 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:45:37,818 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:45:37,818 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:45:37,818 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:45:37,820 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:45:37,820 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:45:39,092 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:45:39,092 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:45:39,094 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:45:39,094 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 1, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:45:39,094 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:45:39,094 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:45:39,094 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:45:39,094 - JSON_Grabber - ERROR - Degiro error details: login_failures=1 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:45:39,095 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:45:39,095 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:45:41,083 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:45:41,083 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:45:45,402 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:45:45,403 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:45:45,404 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:45:45,405 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:45:45,406 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:45:45,406 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:45:45,406 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:45:45,406 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:45:45,407 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:45:45,407 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:45:47,379 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:45:47,379 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 400 73
+2024-12-05 11:45:47,380 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:45:47,380 - degiro_connector.trading.actions.action_connect - CRITICAL - login_error:{'loginFailures': 2, 'status': 3, 'statusText': 'badCredentials'}
+2024-12-05 11:45:47,380 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:45:47,380 - JSON_Grabber - ERROR - Error logging in to Degiro: No session id returned.
+2024-12-05 11:45:47,380 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:45:47,380 - JSON_Grabber - ERROR - Degiro error details: login_failures=2 error=None path=None status=3 status_text='badCredentials' timestamp=None
+2024-12-05 11:45:47,381 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:45:47,381 - __main__ - ERROR - Failed to connect to Degiro
+2024-12-05 11:46:06,371 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:46:06,371 - __main__ - INFO - Attempting to connect with username: DaanvanK
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : check_order
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : confirm_order
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : connect
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:46:09,825 - degiro_connector.trading.api - DEBUG - setup_one_action : create_favorite
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_favorite_product
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : delete_order
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_info
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_overview
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_account_report
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_agenda
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:46:09,826 - degiro_connector.trading.api - DEBUG - setup_one_action : get_client_details
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_profile
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_company_ratios
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_config
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_estimates_summaries
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_favorite
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_financial_statements
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_latest_news
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_news_by_company
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:46:09,827 - degiro_connector.trading.api - DEBUG - setup_one_action : get_orders_history
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_position_report
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_config
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_products_info
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_top_news_preview
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_transactions_history
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_underlyings
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_upcoming_payments
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : get_update
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:46:09,828 - degiro_connector.trading.api - DEBUG - setup_one_action : logout
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : move_favorite
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : product_search
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : put_favorite_product
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : rename_favorite
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:46:09,829 - degiro_connector.trading.api - DEBUG - setup_one_action : update_order
+2024-12-05 11:46:09,829 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:46:09,829 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:46:09,831 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:46:09,831 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:46:10,730 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:46:10,730 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "POST /login/secure/login/totp HTTP/11" 200 None
+2024-12-05 11:46:10,731 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:46:10,731 - degiro_connector.trading.actions.action_connect - INFO - login_sucess: {'isPassCodeEnabled': True, 'locale': 'nl_NL', 'redirectUrl': 'https://trader.degiro.nl/trader/', 'sessionId': '27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1', 'status': 0, 'statusText': 'success'}
+2024-12-05 11:46:10,731 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:46:10,731 - JSON_Grabber - INFO - Connected successfully
+2024-12-05 11:46:10,731 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:46:10,731 - __main__ - INFO - Connected to Degiro successfully
+2024-12-05 11:46:14,646 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:46:14,646 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:46:15,130 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=b&limit=10&offset=0&productTypeId=1&sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:15,130 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /product_search/secure/v5/products/lookup?searchText=b&limit=10&offset=0&productTypeId=1&sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:22,776 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:46:22,776 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:46:22,779 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:46:22,779 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): trader.degiro.nl:443
+2024-12-05 11:46:23,952 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/US0846707026?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:23,952 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-profile/v2/US0846707026?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:23,953 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:46:23,953 - degiro_connector.core.models.model_session - DEBUG - session:getter: Thread-1 (_generate_reports_thread)
+2024-12-05 11:46:24,361 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/US0846707026?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:24,361 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "GET /dgtbxdsservice/company-ratios/US0846707026?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:46:24,362 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:46:24,362 - Generator - INFO - Calculating financial metrics...
+2024-12-05 11:46:24,364 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:46:24,364 - Generator - INFO - Calculating valuation metrics...
+2024-12-05 11:46:24,366 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:46:24,366 - Generator - INFO - Calculating efficiency metrics...
+2024-12-05 11:46:24,369 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:46:24,369 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:46:30,496 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 200 None
+2024-12-05 11:46:30,496 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 200 None
+2024-12-05 11:46:30,498 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:46:30,498 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.perplexity.ai:443
+2024-12-05 11:46:37,377 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 200 None
+2024-12-05 11:46:37,377 - urllib3.connectionpool - DEBUG - https://api.perplexity.ai:443 "POST /chat/completions HTTP/11" 200 None
+2024-12-05 11:46:37,411 - Generator - INFO - PDF generated for Berkshire Hathaway Inc
+2024-12-05 11:46:37,411 - Generator - INFO - PDF generated for Berkshire Hathaway Inc
+2024-12-05 11:48:05,600 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:48:05,600 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:48:05,601 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:48:05,601 - urllib3.connectionpool - DEBUG - Resetting dropped connection: trader.degiro.nl
+2024-12-05 11:48:07,373 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:48:07,373 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:48:07,373 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:48:07,373 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:48:07,397 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:48:07,397 - degiro_connector.core.models.model_session - DEBUG - session:getter: MainThread
+2024-12-05 11:48:07,779 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:48:07,779 - urllib3.connectionpool - DEBUG - https://trader.degiro.nl:443 "PUT /trading/secure/logout;jsessionid=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1?sessionId=27C065B108FD371B93FC36FE730E08A4.prod_dcv_ch67_1 HTTP/11" 200 None
+2024-12-05 11:48:07,779 - JSON_Grabber - INFO - Logged out successfully
+2024-12-05 11:48:07,779 - JSON_Grabber - INFO - Logged out successfully
