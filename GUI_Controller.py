@@ -87,26 +87,6 @@ class ConsoleUi:
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         return formatter.format(record)
 
-# class ConsoleUi:
-#     def __init__(self, frame):
-#         self.frame = frame
-#         self.scrolled_text = ScrolledText(frame, state='disabled', height=12)
-#         self.scrolled_text.grid(row=0, column=0, sticky=(tk.N, tk.S, tk.W, tk.E))
-#         # self.scrolled_text.grid(row=0, column=0, sticky=(tk.N, tk.S, tk.W, tk.E))
-#         self.scrolled_text.configure(font='TkFixedFont')
-#         self.scrolled_text.tag_config('INFO', foreground='black')
-#         self.scrolled_text.tag_config('DEBUG', foreground='gray')
-#         self.scrolled_text.tag_config('WARNING', foreground='orange')
-#         self.scrolled_text.tag_config('ERROR', foreground='red')
-#         self.scrolled_text.tag_config('CRITICAL', foreground='red', underline=1)
-#
-#     def display(self, record):
-#         msg = record
-#         self.scrolled_text.configure(state='normal')
-#         self.scrolled_text.insert(tk.END, msg + '\n', record.split(':')[0])
-#         self.scrolled_text.configure(state='disabled')
-#         self.scrolled_text.yview(tk.END)
-
 class GUIController:
     def __init__(self, master):
         self.use_perplexity = None
@@ -191,24 +171,44 @@ class GUIController:
         self.search_entry.bind('<Return>', lambda event: self.search_companies())
         ttk.Button(core_frame, text="Search", command=self.search_companies).grid(row=0, column=2)
 
-        self.search_results = tk.Listbox(core_frame, height=10)
-        self.search_results.grid(row=1, column=0, columnspan=3, sticky=(tk.W + tk.E))
+        # Create a frame for search results with scrollbar
+        search_frame = ttk.Frame(core_frame)
+        search_frame.grid(row=1, column=0, columnspan=3, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.search_results = tk.Listbox(search_frame, height=10)
+        self.search_results.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        search_scrollbar = ttk.Scrollbar(search_frame, orient=tk.VERTICAL, command=self.search_results.yview)
+        search_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.search_results.config(yscrollcommand=search_scrollbar.set)
         self.search_results.bind('<Double-1>', self.on_double_click)
 
         ttk.Button(core_frame, text="Add Selected", command=self.add_company).grid(row=2, column=2)
 
-        ttk.Label(core_frame, text="Selected Companies").grid(row=3, column=0, columnspan=3)
+        ttk.Label(core_frame, text="Selected Companies").grid(row=3, column=0, columnspan=3, sticky=tk.W)
 
-        self.selected_companies_list = tk.Listbox(core_frame, height=10)
-        self.selected_companies_list.grid(row=4, columnspan=3, sticky=(tk.W, tk.E))
+        # Create a frame for selected companies with scrollbar
+        selected_frame = ttk.Frame(core_frame)
+        selected_frame.grid(row=4, column=0, columnspan=3, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.selected_companies_list = tk.Listbox(selected_frame, height=10)
+        self.selected_companies_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        selected_scrollbar = ttk.Scrollbar(selected_frame, orient=tk.VERTICAL,
+                                           command=self.selected_companies_list.yview)
+        selected_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.selected_companies_list.config(yscrollcommand=selected_scrollbar.set)
 
-        ttk.Button(core_frame, text="Remove Selected", command=self.remove_company).grid(row=5, columnspan=True)
+        # Add buttons below the selected companies field
+        button_frame = ttk.Frame(core_frame)
+        button_frame.grid(row=5, column=0, columnspan=3, sticky=(tk.W, tk.E), pady=5)
+        ttk.Button(button_frame, text="Remove Selected", command=self.remove_company).pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(button_frame, text="Generate Reports", command=self.generate_reports).pack(side=tk.LEFT)
 
-        ttk.Button(core_frame, text="Generate Reports", command=self.generate_reports).grid(columnspan=True, pady=(10))
+        # Configure grid weights
+        core_frame.columnconfigure(1, weight=1)
+        core_frame.rowconfigure(1, weight=1)
+        core_frame.rowconfigure(4, weight=1)
 
         # Console Frame (Bottom)
         self.console_frame = ttk.LabelFrame(main_frame, text="Console")
-        self.console_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E), padx=5, pady=5)
+        self.console_frame.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E), padx=5, pady=5)
         self.console_text = scrolledtext.ScrolledText(self.console_frame, height=3, wrap=tk.WORD)
         self.console_text.grid(row=0, column=0, sticky=(tk.W, tk.E))
         self.console_text.config(state=tk.DISABLED)
@@ -250,7 +250,7 @@ class GUIController:
         notebook.add(api_frame, text='Perplexity API Settings')
 
         ttk.Label(api_frame, text="Perplexity API Key:").grid(row=0, column=0, sticky='w', padx=5, pady=5)
-        self.perplexity_api_key_entry = ttk.Entry(api_frame, show="")
+        self.perplexity_api_key_entry = ttk.Entry(api_frame, show="", width=50)
         self.perplexity_api_key_entry.grid(row=0, column=1, sticky='w', padx=5, pady=5)
         self.perplexity_api_key_entry.insert(0, keyring.get_password("FinancialReportApp", "perplexity_api_key") or "")
 
@@ -273,11 +273,26 @@ class GUIController:
         self.degiro_username_entry.grid(row=0, column=1, sticky='w', padx=5, pady=5)
         self.degiro_username_entry.insert(0, keyring.get_password("FinancialReportApp", "degiro_username") or "")
 
+
+        ttk.Label(degiro_frame, text="Output Directory:").grid(row=1, column=0, sticky='w', padx=5, pady=5)
+        self.output_dir_entry = ttk.Entry(degiro_frame, width=50)
+        self.output_dir_entry.grid(row=1, column=1, sticky='w', padx=5, pady=5)
+        self.output_dir_entry.insert(0, os.path.join(os.getcwd(), "FinancialReports"))
+        ttk.Button(degiro_frame, text="Browse", command=self.browse_output_dir).grid(row=1, column=2, sticky='w',padx=5, pady=5)
+
         ttk.Button(self.advanced_settings_window, text="Delete Saved Credentials", command=self.delete_saved_credentials).pack(pady=10)
         ttk.Button(self.advanced_settings_window, text="Save", command=lambda: self.save_settings(prompt_text, max_tokens_entry)).pack(pady=10)
 
-    def save_settings(self, prompt_text, max_tokens_entry):
-        APIHandler.set_default_prompt(prompt_text.get("1.0", tk.END).strip())
+
+    def browse_output_dir(self):
+        directory = filedialog.askdirectory()
+        if directory:
+            self.output_dir_entry.delete(0, tk.END)
+            self.output_dir_entry.insert(0, directory)
+
+    def save_settings(self, swot_prompt_text, insights_prompt_text, max_tokens_entry):
+        APIHandler.set_swot_prompt(swot_prompt_text.get("1.0", tk.END).strip())
+        APIHandler.set_insights_prompt(insights_prompt_text.get("1.0", tk.END).strip())
         APIHandler.set_max_tokens(int(max_tokens_entry.get()))
         keyring.set_password("FinancialReportApp", "perplexity_api_key", self.perplexity_api_key_entry.get())
         self.close_advanced_settings()
@@ -335,18 +350,23 @@ class GUIController:
         notebook.add(api_frame, text='Perplexity API Settings')
 
         ttk.Label(api_frame, text="Perplexity API Key:").grid(row=0, column=0, sticky='w', padx=5, pady=5)
-        self.perplexity_api_key_entry = ttk.Entry(api_frame, show="")
+        self.perplexity_api_key_entry = ttk.Entry(api_frame, show="", width=50)
         self.perplexity_api_key_entry.grid(row=0, column=1, sticky='w', padx=5, pady=5)
         self.perplexity_api_key_entry.insert(0, keyring.get_password("FinancialReportApp", "perplexity_api_key") or "")
 
-        ttk.Label(api_frame, text="API Prompt:").grid(row=1, column=0, sticky='w', padx=5, pady=5)
-        prompt_text = scrolledtext.ScrolledText(api_frame, height=10, width=70, wrap=tk.WORD)
-        prompt_text.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
-        prompt_text.insert(tk.END, APIHandler.get_default_prompt())
+        ttk.Label(api_frame, text="SWOT Analysis Prompt:").grid(row=1, column=0, sticky='w', padx=5, pady=5)
+        swot_prompt_text = scrolledtext.ScrolledText(api_frame, height=5, width=70, wrap=tk.WORD)
+        swot_prompt_text.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+        swot_prompt_text.insert(tk.END, APIHandler.get_swot_prompt())
 
-        ttk.Label(api_frame, text="Max Tokens:").grid(row=3, column=0, sticky='w', padx=5, pady=5)
+        ttk.Label(api_frame, text="AI Insights Prompt:").grid(row=3, column=0, sticky='w', padx=5, pady=5)
+        insights_prompt_text = scrolledtext.ScrolledText(api_frame, height=5, width=70, wrap=tk.WORD)
+        insights_prompt_text.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
+        insights_prompt_text.insert(tk.END, APIHandler.get_insights_prompt())
+
+        ttk.Label(api_frame, text="Max Tokens:").grid(row=5, column=0, sticky='w', padx=5, pady=5)
         max_tokens_entry = ttk.Entry(api_frame)
-        max_tokens_entry.grid(row=3, column=1, sticky='w', padx=5, pady=5)
+        max_tokens_entry.grid(row=5, column=1, sticky='w', padx=5, pady=5)
         max_tokens_entry.insert(0, str(APIHandler.get_max_tokens()))
 
         # DeGiro settings tab
@@ -361,7 +381,8 @@ class GUIController:
         ttk.Button(self.advanced_settings_window, text="Delete Saved Credentials",
                    command=self.delete_saved_credentials).pack(pady=10)
         ttk.Button(self.advanced_settings_window, text="Save",
-                   command=lambda: self.save_settings(prompt_text, max_tokens_entry)).pack(pady=10)
+                   command=lambda: self.save_settings(swot_prompt_text, insights_prompt_text, max_tokens_entry)).pack(
+            pady=10)
 
     def close_advanced_settings(self):
         self.advanced_settings_window.destroy()
@@ -382,30 +403,41 @@ class GUIController:
     def connect_to_degiro(self):
         username = self.username_entry.get()
         password = self.password_entry.get()
-        logger.info(f"Attempting to connect with username: {username}")
 
-        # Use the credentials from the GUI fields
         if username and password:
-            # Prompt user for 2FA code
-            two_factor_code = simpledialog.askstring("2FA Code", "Enter your 6-digit 2FA code:", parent=self.master)
-            if not two_factor_code:
-                logger.error("Error", "2FA code is required")
-                return
+            try:
+                # First attempt: with 2FA
+                self.degiro_connector = DegiroConnector(prompt_for_2fa_callback=self.prompt_for_2fa)
+                if self.degiro_connector.connect(username, password):
+                    logger.info("Connected to Degiro successfully with 2FA")
+                    self.connection_status.config(text="Connected", foreground="green")
+                    self.logout_button.config(state=tk.NORMAL)
+                    return
 
-            self.degiro_connector = DegiroConnector()
-            if self.degiro_connector.connect(username, password, two_factor_code):
-                # messagebox.showinfo("Success", "Connected to Degiro successfully")
-                logger.info("Connected to Degiro successfully")
-                self.connection_status.config(text="Connected", foreground="green")
-                self.logout_button.config(state=tk.NORMAL)
-            else:
-                # messagebox.showerror("Error", "Failed to connect to Degiro")
+                # Second attempt: without 2FA
+                logger.info("2FA connection failed, attempting without 2FA")
+                self.degiro_connector = DegiroConnector(prompt_for_2fa_callback=None)
+                if self.degiro_connector.connect(username, password):
+                    logger.info("Connected to Degiro successfully without 2FA")
+                    self.connection_status.config(text="Connected", foreground="green")
+                    self.logout_button.config(state=tk.NORMAL)
+                    return
+
+                # If both attempts fail
                 self.connection_status.config(text="Not Connected", foreground="red")
-                logger.error("Failed to connect to Degiro")
+                logger.error("Failed to connect to Degiro with and without 2FA")
                 self.logout_button.config(state=tk.DISABLED)
+                messagebox.showerror("Connection Error", "Failed to connect to Degiro")
+
+            except Exception as e:
+                logger.error(f"Unexpected error during Degiro connection: {str(e)}")
+                messagebox.showerror("Connection Error", f"An error occurred: {str(e)}")
         else:
-            # messagebox.showerror("Error", "Username and password are required")
-            logger.error("Error", "Username and password are required")
+            logger.error("Username and password are required")
+            messagebox.showerror("Input Error", "Username and password are required")
+
+    def prompt_for_2fa(self):
+        return simpledialog.askstring("2FA Code", "Enter your 6-digit 2FA code:", parent=self.master)
 
     def logout_from_degiro(self):
         if self.degiro_connector:

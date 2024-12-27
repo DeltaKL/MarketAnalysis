@@ -114,17 +114,25 @@ class DataProcessor:
         }
 
 class APIHandler:
-
-    _default_prompt = "Conduct a detailed SWOT analysis for {company_name}. Provide specific points for Strengths, Weaknesses, Opportunities, and Threats. Format the response as a JSON object with keys 'Strengths', 'Weaknesses', 'Opportunities', and 'Threats', each containing an array of concise points."
+    _swot_prompt = "Conduct a detailed SWOT analysis for {company_name}. Provide specific points for Strengths, Weaknesses, Opportunities, and Threats. Format the response as a JSON object with keys 'Strengths', 'Weaknesses', 'Opportunities', and 'Threats', each containing an array of concise points."
+    _insights_prompt = "Provide detailed AI insights for {company_name}. Include the following sections: Market Analysis, Competitor Benchmarking, Risk Factors, Strategic Recommendations, and Future Projections. Format each section with '### Section Title' and use bullet points where appropriate. Do not include confidence scores or citations in the response."
     _max_tokens = 1000
 
     @classmethod
-    def get_default_prompt(cls):
-        return cls._default_prompt
+    def get_swot_prompt(cls):
+        return cls._swot_prompt
 
     @classmethod
-    def set_default_prompt(cls, prompt):
-        cls._default_prompt = prompt
+    def set_swot_prompt(cls, prompt):
+        cls._swot_prompt = prompt
+
+    @classmethod
+    def get_insights_prompt(cls):
+        return cls._insights_prompt
+
+    @classmethod
+    def set_insights_prompt(cls, prompt):
+        cls._insights_prompt = prompt
 
     @classmethod
     def set_max_tokens(cls, max_tokens):
@@ -149,7 +157,7 @@ class APIHandler:
                 "model": "llama-3.1-sonar-small-128k-online",
                 "messages": [{
                     "role": "user",
-                    "content": self._default_prompt.format(company_name=company_name)
+                    "content": self._swot_prompt.format(company_name=company_name)
                 }],
                 "max_tokens": self._max_tokens
             }
