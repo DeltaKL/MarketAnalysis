@@ -25,6 +25,7 @@ os.environ['TCL_LIBRARY'] = r'C:\Users\daanv\AppData\Local\Programs\Python\Pytho
 os.environ['TK_LIBRARY'] = r'C:\Users\daanv\AppData\Local\Programs\Python\Python313\tcl\tk8.6'
 
 # Perplexity API key
+api_key = os.getenv('PERPLEXITY_API_KEY')
 
 
 class DataProcessor:
@@ -114,98 +115,137 @@ class DataProcessor:
         }
 
 class APIHandler:
-    _swot_prompt = "Conduct a detailed SWOT analysis for {company_name}. Provide specific points for Strengths, Weaknesses, Opportunities, and Threats. Format the response as a JSON object with keys 'Strengths', 'Weaknesses', 'Opportunities', and 'Threats', each containing an array of concise points."
-    _insights_prompt = "Provide detailed AI insights for {company_name}. Include the following sections: Market Analysis, Competitor Benchmarking, Risk Factors, Strategic Recommendations, and Future Projections. Format each section with '### Section Title' and use bullet points where appropriate. Do not include confidence scores or citations in the response."
-    _max_tokens = 1000
+            # Define class variables at the top
+            _swot_prompt = "Conduct a detailed SWOT analysis..."
+            _insights_prompt = "Provide detailed AI insights..."
+            _max_tokens = 1000
 
-    @classmethod
-    def get_swot_prompt(cls):
-        return cls._swot_prompt
+            def __init__(self):
+                self.api_key = os.getenv('PERPLEXITY_API_KEY')
+                self.api_url = "https://api.perplexity.ai/chat/completions"
+                self.config_file = 'api_settings.json'
+                self.load_settings()
 
-    @classmethod
-    def set_swot_prompt(cls, prompt):
-        cls._swot_prompt = prompt
+            def load_settings(self):
+                try:
+                    with open(self.config_file, 'r') as f:
+                        settings = json.load(f)
+                        self.__class__._swot_prompt = settings.get('swot_prompt', self._swot_prompt)
+                        self.__class__._insights_prompt = settings.get('insights_prompt', self._insights_prompt)
+                        self.__class__._max_tokens = settings.get('max_tokens', self._max_tokens)
+                except FileNotFoundError:
+                    self.save_settings()
 
-    @classmethod
-    def get_insights_prompt(cls):
-        return cls._insights_prompt
+            def save_settings(self):
+                settings = {
+                    'swot_prompt': self._swot_prompt,
+                    'insights_prompt': self._insights_prompt,
+                    'max_tokens': self._max_tokens
+                }
+                with open(self.config_file, 'w') as f:
+                    json.dump(settings, f, indent=4)
 
-    @classmethod
-    def set_insights_prompt(cls, prompt):
-        cls._insights_prompt = prompt
 
-    @classmethod
-    def set_max_tokens(cls, max_tokens):
-        cls._max_tokens = max_tokens
+            @classmethod
+            def set_swot_prompt(cls, prompt):
+                    cls._swot_prompt = prompt
+                    cls().save_settings()
 
-    @classmethod
-    def get_max_tokens(cls):
-        return cls._max_tokens
+            @classmethod
+            def set_insights_prompt(cls, prompt):
+                cls._insights_prompt = prompt
+                cls().save_settings()
 
-    def __init__(self):
-        self.api_key = os.getenv('PERPLEXITY_API_KEY')
-        self.api_url = "https://api.perplexity.ai/chat/completions"
+            @classmethod
+            def set_max_tokens(cls, max_tokens):
+                cls._max_tokens = max_tokens
+                cls().save_settings()
 
-    def get_swot_analysis(self, company_name):
-        try:
-            headers = {
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json"
+            @classmethod
+            def get_swot_prompt(cls):
+                return cls._swot_prompt
 
-            }
-            data = {
-                "model": "llama-3.1-sonar-small-128k-online",
-                "messages": [{
-                    "role": "user",
-                    "content": self._swot_prompt.format(company_name=company_name)
-                }],
-                "max_tokens": self._max_tokens
-            }
-            response = requests.post(self.api_url, headers=headers, json=data)
-            response.raise_for_status()
-            result = response.json()
-            content = result['choices'][0]['message']['content']
-            json_start = content.find('{')
-            json_end = content.rfind('}') + 1
-            json_content = content[json_start:json_end]
-            swot_analysis = json.loads(json_content)
-            return swot_analysis
-        except requests.exceptions.RequestException as e:
-            logger.warning(f"API request failed: {e}")
-        except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse API response: {e}")
-            logger.info(f"Response content: {content}")
-        except Exception as e:
-            logger.error(f"Unexpected error in API handling: {e}")
-        return None
+            @classmethod
+            def set_swot_prompt(cls, prompt):
+                cls._swot_prompt = prompt
 
-    def get_ai_insights(self, company_name):
-        try:
-            headers = {
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json"
-            }
-            data = {
-                "model": "llama-3.1-sonar-small-128k-online",
-                "messages": [{
-                    "role": "user",
-                    "content": (
-                        f"Provide detailed AI insights for {company_name}. "
-                        "Include the following sections: Market Analysis, Competitor Benchmarking, Risk Factors, Strategic Recommendations, and Future Projections. "
-                        "Format each section with '### Section Title' and use bullet points where appropriate. "
-                        "Do not include confidence scores or citations in the response."
-                    )
-                }],
-                "max_tokens": self._max_tokens
-            }
-            response = requests.post(self.api_url, headers=headers, json=data)
-            response.raise_for_status()
-            result = response.json()
-            insights_content = result['choices'][0]['message']['content']
-            return insights_content.strip()
-        except Exception as e:
-            logger.error(f"Unexpected error in API handling: {e}")
-        return None
+            @classmethod
+            def get_insights_prompt(cls):
+                return cls._insights_prompt
+
+            @classmethod
+            def set_insights_prompt(cls, prompt):
+                cls._insights_prompt = prompt
+
+            @classmethod
+            def set_max_tokens(cls, max_tokens):
+                cls._max_tokens = max_tokens
+
+            @classmethod
+            def get_max_tokens(cls):
+                return cls._max_tokens
+
+
+            def get_swot_analysis(self, company_name):
+                try:
+                    headers = {
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json"
+
+                    }
+                    data = {
+                        "model": "llama-3.1-sonar-small-128k-online",
+                        "messages": [{
+                            "role": "user",
+                            "content": self._swot_prompt.format(company_name=company_name)
+                        }],
+                        "max_tokens": self._max_tokens
+                    }
+                    response = requests.post(self.api_url, headers=headers, json=data)
+                    response.raise_for_status()
+                    result = response.json()
+                    content = result['choices'][0]['message']['content']
+                    json_start = content.find('{')
+                    json_end = content.rfind('}') + 1
+                    json_content = content[json_start:json_end]
+                    swot_analysis = json.loads(json_content)
+                    return swot_analysis
+                except requests.exceptions.RequestException as e:
+                    logger.warning(f"API request failed: {e}")
+                except json.JSONDecodeError as e:
+                    logger.error(f"Failed to parse API response: {e}")
+                    logger.info(f"Response content: {content}")
+                except Exception as e:
+                    logger.error(f"Unexpected error in API handling: {e}")
+                return None
+
+            def get_ai_insights(self, company_name):
+                try:
+                    headers = {
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json"
+                    }
+                    data = {
+                        "model": "llama-3.1-sonar-small-128k-online",
+                        "messages": [{
+                            "role": "user",
+                            "content": (
+                                f"Provide detailed AI insights for {company_name}. "
+                                "Include the following sections: Market Analysis, Competitor Benchmarking, Risk Factors, Strategic Recommendations, and Future Projections. "
+                                "Format each section with '### Section Title' and use bullet points where appropriate. "
+                                "Do not include confidence scores or citations in the response."
+                            )
+                        }],
+                        "max_tokens": self._max_tokens
+                    }
+                    response = requests.post(self.api_url, headers=headers, json=data)
+                    response.raise_for_status()
+                    result = response.json()
+                    insights_content = result['choices'][0]['message']['content']
+                    return insights_content.strip()
+                except Exception as e:
+                    logger.error(f"Unexpected error in API handling: {e}")
+                return None
 
 
 class PDFGenerator:
@@ -659,7 +699,7 @@ def main():
         data_processor = DataProcessor(json_data)
         data_processor.process_data()
 
-        api_handler = APIHandler(api_key)
+        api_handler = APIHandler()
         company_name = data_processor.processed_data['company_overview']['legal_name']
 
         swot_analysis = api_handler.get_swot_analysis(company_name)
