@@ -1,5 +1,7 @@
 import logging
 
+import keyring
+
 logging.basicConfig(filename='financial_report_app.log', level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -114,138 +116,176 @@ class DataProcessor:
             self.get_ratio_value('Focf2Rev_TTM') or self.get_ratio_value('AFocf2Rev'), 'TTM/LFY')
         }
 
+
 class APIHandler:
-            # Define class variables at the top
-            _swot_prompt = "Conduct a detailed SWOT analysis..."
-            _insights_prompt = "Provide detailed AI insights..."
-            _max_tokens = 1000
+    def __init__(self):
+        self.api_key = os.getenv('PERPLEXITY_API_KEY')
+        self.api_url = "https://api.perplexity.ai/chat/completions"
+        self.config_file = 'api_settings.json'
 
-            def __init__(self):
-                self.api_key = os.getenv('PERPLEXITY_API_KEY')
-                self.api_url = "https://api.perplexity.ai/chat/completions"
-                self.config_file = 'api_settings.json'
-                self.load_settings()
+        # Default XML-formatted prompt for individual analysis
+        self._default_prompt = '''<analysis_request>
+    <company>{company_name}</company>
+    <sections>
+        <strategic_analysis>
+            <strengths>Identify 3-4 key financial and operational strengths with supporting data</strengths>
+            <weaknesses>Identify 3-4 main financial and operational weaknesses with supporting data</weaknesses>
+            <opportunities>List 3-4 potential growth opportunities and market advantages</opportunities>
+            <threats>List 3-4 key market risks and competitive threats</threats>
+        </strategic_analysis>
+        <detailed_analysis>
+            <market_position>Analyze current market position and competitive standing</market_position>
+            <financial_health>Evaluate overall financial health including key ratios and metrics</financial_health>
+            <outlook>Provide forward-looking analysis and growth potential</outlook>
+            <recommendation>
+                <rating>Provide a clear investment rating (Buy/Hold/Sell)</rating>
+                <rationale>Explain the investment recommendation with key supporting factors</rationale>
+            </recommendation>
+        </detailed_analysis>
+    </sections>
+</analysis_request>'''
 
-            def load_settings(self):
-                try:
-                    with open(self.config_file, 'r') as f:
-                        settings = json.load(f)
-                        self.__class__._swot_prompt = settings.get('swot_prompt', self._swot_prompt)
-                        self.__class__._insights_prompt = settings.get('insights_prompt', self._insights_prompt)
-                        self.__class__._max_tokens = settings.get('max_tokens', self._max_tokens)
-                except FileNotFoundError:
-                    self.save_settings()
+        # Default comparison prompt
+        self._default_comparison_prompt = '''<comparison_request>
+    <companies>{company_names}</companies>
+    <sections>
+        <relative_analysis>
+            <valuation>Compare key valuation metrics (P/E, P/B, etc.)</valuation>
+            <profitability>Compare profit margins and operational efficiency</profitability>
+            <growth>Compare revenue and earnings growth trends</growth>
+        </relative_analysis>
+        <recommendations>
+            <ranking>Rank companies by investment attractiveness</ranking>
+            <rationale>Explain the ranking with supporting metrics</rationale>
+        </recommendations>
+    </sections>
+</comparison_request>'''
 
-            def save_settings(self):
-                settings = {
-                    'swot_prompt': self._swot_prompt,
-                    'insights_prompt': self._insights_prompt,
-                    'max_tokens': self._max_tokens
-                }
-                with open(self.config_file, 'w') as f:
-                    json.dump(settings, f, indent=4)
+        self._individual_prompt = self._default_prompt
+        self._comparison_prompt = self._default_comparison_prompt
+        self._max_tokens = 1000
+        self._model_temperature = 0.2
 
+        self.load_settings()
 
-            @classmethod
-            def set_swot_prompt(cls, prompt):
-                    cls._swot_prompt = prompt
-                    cls().save_settings()
+    def save_settings(self):
+        settings = {
+            'individual_prompt': self._individual_prompt,
+            'comparison_prompt': self._comparison_prompt,
+            'max_tokens': self._max_tokens,
+            'model_temperature': self._model_temperature
+        }
+        try:
+            with open(self.config_file, 'w') as f:
+                json.dump(settings, f, indent=4)
+            logger.info("Settings saved successfully")
+        except Exception as e:
+            logger.error(f"Error saving settings: {e}")
 
-            @classmethod
-            def set_insights_prompt(cls, prompt):
-                cls._insights_prompt = prompt
-                cls().save_settings()
+    def load_settings(self):
+        try:
+            with open(self.config_file, 'r') as f:
+                settings = json.load(f)
+                self._individual_prompt = settings.get('individual_prompt', self._individual_prompt)
+                self._comparison_prompt = settings.get('comparison_prompt', self._comparison_prompt)
+                self._max_tokens = settings.get('max_tokens', self._max_tokens)
+                self._model_temperature = settings.get('model_temperature', self._model_temperature)
+                logger.debug(f"Loaded settings: individual_prompt='{self._individual_prompt}'")
+        except FileNotFoundError:
+            self.save_settings()
 
-            @classmethod
-            def set_max_tokens(cls, max_tokens):
-                cls._max_tokens = max_tokens
-                cls().save_settings()
-
-            @classmethod
-            def get_swot_prompt(cls):
-                return cls._swot_prompt
-
-            @classmethod
-            def set_swot_prompt(cls, prompt):
-                cls._swot_prompt = prompt
-
-            @classmethod
-            def get_insights_prompt(cls):
-                return cls._insights_prompt
-
-            @classmethod
-            def set_insights_prompt(cls, prompt):
-                cls._insights_prompt = prompt
-
-            @classmethod
-            def set_max_tokens(cls, max_tokens):
-                cls._max_tokens = max_tokens
-
-            @classmethod
-            def get_max_tokens(cls):
-                return cls._max_tokens
+    # Getters and setters
 
 
-            def get_swot_analysis(self, company_name):
-                try:
-                    headers = {
-                        "Authorization": f"Bearer {self.api_key}",
-                        "Content-Type": "application/json"
+    def get_individual_prompt(self):
+        return self._individual_prompt
 
-                    }
-                    data = {
-                        "model": "llama-3.1-sonar-small-128k-online",
-                        "messages": [{
-                            "role": "user",
-                            "content": self._swot_prompt.format(company_name=company_name)
-                        }],
-                        "max_tokens": self._max_tokens
-                    }
-                    response = requests.post(self.api_url, headers=headers, json=data)
-                    response.raise_for_status()
-                    result = response.json()
-                    content = result['choices'][0]['message']['content']
-                    json_start = content.find('{')
-                    json_end = content.rfind('}') + 1
-                    json_content = content[json_start:json_end]
-                    swot_analysis = json.loads(json_content)
-                    return swot_analysis
-                except requests.exceptions.RequestException as e:
-                    logger.warning(f"API request failed: {e}")
-                except json.JSONDecodeError as e:
-                    logger.error(f"Failed to parse API response: {e}")
-                    logger.info(f"Response content: {content}")
-                except Exception as e:
-                    logger.error(f"Unexpected error in API handling: {e}")
-                return None
+    def set_individual_prompt(self, prompt):
+        self._individual_prompt = prompt
+        self.save_settings()
 
-            def get_ai_insights(self, company_name):
-                try:
-                    headers = {
-                        "Authorization": f"Bearer {self.api_key}",
-                        "Content-Type": "application/json"
-                    }
-                    data = {
-                        "model": "llama-3.1-sonar-small-128k-online",
-                        "messages": [{
-                            "role": "user",
-                            "content": (
-                                f"Provide detailed AI insights for {company_name}. "
-                                "Include the following sections: Market Analysis, Competitor Benchmarking, Risk Factors, Strategic Recommendations, and Future Projections. "
-                                "Format each section with '### Section Title' and use bullet points where appropriate. "
-                                "Do not include confidence scores or citations in the response."
-                            )
-                        }],
-                        "max_tokens": self._max_tokens
-                    }
-                    response = requests.post(self.api_url, headers=headers, json=data)
-                    response.raise_for_status()
-                    result = response.json()
-                    insights_content = result['choices'][0]['message']['content']
-                    return insights_content.strip()
-                except Exception as e:
-                    logger.error(f"Unexpected error in API handling: {e}")
-                return None
+    def get_comparison_prompt(self):
+        return self._comparison_prompt
+
+    def set_comparison_prompt(self, prompt):
+        self._comparison_prompt = prompt
+        self.save_settings()
+
+    def get_max_tokens(self):
+        return self._max_tokens
+
+    def set_max_tokens(self, tokens):
+        self._max_tokens = tokens
+        self.save_settings()
+
+    def get_model_temperature(self):
+        return self._model_temperature
+
+    def set_model_temperature(self, temperature):
+        self._model_temperature = temperature
+        self.save_settings()
+
+    def get_individual_analysis(self, company_name):
+        """Gets AI analysis for a single company based on the configured prompt"""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json"
+            }
+
+            data = {
+                "model": "llama-3.1-sonar-small-128k-online",
+                # "model": "llam a-3.1-70b-instruct",
+
+                "messages": [{
+                    "role": "user",
+                    "content": self._individual_prompt.format(company_name=company_name)
+                }],
+                "max_tokens": self._max_tokens,
+                "temperature": self._model_temperature,
+
+            }
+
+            response = requests.post(self.api_url, headers=headers, json=data)
+            response.raise_for_status()
+            response_json = response.json()
+
+            # Print token usage information
+            if 'usage' in response_json:
+                usage = response_json['usage']
+                print(f"\nToken Usage:")
+                print(f"Prompt tokens: {usage.get('prompt_tokens', 'N/A')}")
+                print(f"Completion tokens: {usage.get('completion_tokens', 'N/A')}")
+                print(f"Total tokens: {usage.get('total_tokens', 'N/A')}\n")
+
+            return response_json['choices'][0]['message']['content'].strip()
+        except Exception as e:
+            logger.error(f"Error in individual analysis: {e}")
+            return None
+
+    def get_comparison_analysis(self, companies_data):
+        """Gets AI analysis comparing multiple companies based on the configured prompt"""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json"
+            }
+
+            data = {
+                "model": "llama-3.1-sonar-small-128k-online",
+                "messages": [{
+                    "role": "user",
+                    "content": f"{self._comparison_prompt}\n{json.dumps(companies_data, indent=2)}"
+                }],
+                "max_tokens": self._max_tokens
+            }
+
+            response = requests.post(self.api_url, headers=headers, json=data)
+            response.raise_for_status()
+            return response.json()['choices'][0]['message']['content'].strip()
+        except Exception as e:
+            logger.error(f"Error in comparison analysis: {e}")
+            return None
 
 
 class PDFGenerator:
@@ -263,17 +303,135 @@ class PDFGenerator:
         self.styles['BodyText'].spaceAfter = 6
         self.styles.add(ParagraphStyle(name='BodyTextBold', parent=self.styles['BodyText'], fontName='Helvetica-Bold'))
 
+    def generate_comparison_pdf(self):
+        """Generates a PDF comparing multiple companies"""
+        try:
+            # Title
+            self.story.append(Paragraph("Company Comparison Analysis", self.styles['Heading1']))
+
+            # Financial Metrics Comparison
+            self.story.append(Paragraph("Financial Metrics Comparison", self.styles['Heading2']))
+
+            # Create table data
+            metrics_data = []
+            companies = [comp['company_name'] for comp in self.processed_data]
+
+            # Headers row
+            headers = ['Metric'] + companies
+            metrics_data.append(headers)
+
+            # Define metrics to compare with labels
+            metrics_to_compare = {
+                'PE Ratio': ('valuation_ratios', 'pe_ratio'),
+                'Price to Book': ('valuation_ratios', 'price_to_book'),
+                'Price to Sales': ('valuation_ratios', 'price_to_sales'),
+                'Operating Margin (%)': ('efficiency_metrics', 'operating_margin'),
+                'Net Profit Margin (%)': ('efficiency_metrics', 'net_profit_margin'),
+                'Gross Margin (%)': ('efficiency_metrics', 'gross_margin'),
+                'EPS': ('financial_metrics', 'eps'),
+                'Revenue Per Share': ('financial_metrics', 'revenue_per_share')
+            }
+
+            # Add rows for each metric
+            for metric_name, (section, key) in metrics_to_compare.items():
+                row = [metric_name]
+                for company in self.processed_data:
+                    try:
+                        value = company['financial_data'][section][key][0]
+                        formatted_value = f"{value:.2f}" if value is not None else 'N/A'
+                        row.append(formatted_value)
+                    except (KeyError, IndexError, TypeError):
+                        row.append('N/A')
+                metrics_data.append(row)
+
+            # Create and style the table
+            table = Table(metrics_data, colWidths=[2 * inch] + [1.5 * inch] * len(companies))
+            table.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+                ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('FONTSIZE', (0, 0), (-1, 0), 11),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+                ('FONTSIZE', (0, 1), (-1, -1), 10)
+            ]))
+
+            self.story.append(table)
+            self.story.append(Spacer(1, 12))
+
+            # AI Analysis Section with proper formatting
+            if self.ai_insights:
+                sections = self.ai_insights.split('###')
+                for section in sections:
+                    if not section.strip():
+                        continue
+
+                    # Handle section titles and content
+                    parts = section.strip().split('\n', 1)
+                    if len(parts) == 2:
+                        title, content = parts
+                        self.story.append(Paragraph(title.strip(), self.styles['Heading2']))
+
+                        # Handle subsections marked with ####
+                        if '##' in content:
+                            subsections = content.split('####')
+                            for subsection in subsections:
+                                if subsection.strip():
+                                    sub_parts = subsection.strip().split('\n', 1)
+                                    if len(sub_parts) == 2:
+                                        subtitle, subcontent = sub_parts
+                                        self.story.append(Paragraph(subtitle.strip(), self.styles['Heading3']))
+                                        self.story.append(Paragraph(subcontent.strip(), self.styles['Normal']))
+                        else:
+                            self.story.append(Paragraph(content.strip(), self.styles['Normal']))
+                    else:
+                        self.story.append(Paragraph(section.strip(), self.styles['Normal']))
+
+                    self.story.append(Spacer(1, 12))
+
+            # Generate the PDF
+            self.doc.build(self.story)
+
+        except Exception as e:
+            logger.error(f"Error generating comparison PDF: {e}")
+
     def generate_pdf(self):
         self.generate_company_overview(self.processed_data['company_overview'])
         self.generate_financial_snapshot()
         self.generate_valuation_analysis()
         self.generate_efficiency_and_profitability()
-        if 'swot_analysis' in self.ai_insights:
-            self.generate_swot_analysis(self.ai_insights['swot_analysis'])
-        if 'ai_insights' in self.ai_insights:
-            self.generate_ai_insights()
+
+        # Single unified AI section that handles any response format
+        if self.ai_insights:
+            self.generate_ai_section()
+
         self.doc.build(self.story)
         logger.info(f"PDF generated for {self.company_name}")
+
+    def generate_ai_section(self):
+        """Handle any AI response format"""
+        self.story.append(Paragraph("AI Analysis", self.styles['Heading1']))
+
+        if isinstance(self.ai_insights, str):
+            # Handle raw text response
+            self.story.append(Paragraph(self.ai_insights, self.styles['Normal']))
+        elif isinstance(self.ai_insights, dict):
+            # Handle structured response
+            for section, content in self.ai_insights.items():
+                self.story.append(Paragraph(
+                    section.replace('_', ' ').title(),
+                    self.styles['Heading2']
+                ))
+                if isinstance(content, (list, tuple)):
+                    for item in content:
+                        self.story.append(Paragraph(f"• {item}", self.styles['Normal']))
+                else:
+                    self.story.append(Paragraph(str(content), self.styles['Normal']))
+                self.story.append(Spacer(1, 12))
+
+        self.story.append(Spacer(1, 12))
 
     def generate_company_pdf(self, company_data):
         self.generate_company_overview(company_data['company_overview'])
@@ -614,28 +772,25 @@ class PDFGenerator:
 
     def generate_ai_insights(self):
         try:
-            self.story.append(Paragraph("AI Insights", self.styles['Heading1']))
-            ai_insights = self.ai_insights.get('ai_insights')
-            if ai_insights:
-                sections = ai_insights.split('###')
-                for section in sections:
-                    if section.strip():
-                        lines = section.split('\n')
-                        title = lines[0].strip()
-                        self.story.append(Paragraph(title, self.styles['Heading2']))
+            analysis = self.ai_insights.get('analysis')
+            if analysis:
+                # Parse SWOT section
+                swot = analysis.get('swot', {})
+                self.story.append(Paragraph("SWOT Analysis", self.styles['Heading1']))
+                for category in ['strengths', 'weaknesses', 'opportunities', 'threats']:
+                    self.story.append(Paragraph(category.title(), self.styles['Heading2']))
+                    for point in swot.get(category, []):
+                        self.story.append(Paragraph(f"• {point}", self.styles['Normal']))
+                    self.story.append(Spacer(1, 12))
 
-                        for paragraph in lines[1:]:
-                            if paragraph.strip():
-                                # Remove Markdown formatting and citations
-                                clean_paragraph = re.sub(r'\*\*|\[.*?\]', '', paragraph).strip()
-                                if clean_paragraph.startswith('•'):
-                                    self.story.append(Paragraph(clean_paragraph, self.styles['BulletPoint']))
-                                else:
-                                    self.story.append(Paragraph(clean_paragraph, self.styles['BodyText']))
-
-                        self.story.append(Spacer(1, 12))
-            else:
-                self.story.append(Paragraph("No AI insight available", self.styles['Normal']))
+                # Parse Insights section
+                insights = analysis.get('insights', {})
+                self.story.append(Paragraph("Market Analysis", self.styles['Heading1']))
+                for section, content in insights.items():
+                    self.story.append(Paragraph(section.replace('_', ' ').title(),
+                                                self.styles['Heading2']))
+                    self.story.append(Paragraph(content, self.styles['Normal']))
+                    self.story.append(Spacer(1, 12))
         except Exception as e:
             logger.error(f"Error generating AI insights: {e}")
 
@@ -658,6 +813,7 @@ class PDFGenerator:
             self.story.append(Spacer(1, 12))
         except Exception as e:
             logger.error(f"Error generating SWOT analysis: {e}")
+
 
     def generate_valuation_analysis(self):
         try:
