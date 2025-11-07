@@ -7,8 +7,8 @@ from typing import Dict, Any, List
 from degiro_connector.trading.api import API as TradingAPI
 from degiro_connector.trading.models.credentials import Credentials
 from degiro_connector.core.exceptions import DeGiroConnectionError
-from degiro_connector.trading.api import API
-from degiro_connector.trading.actions.action_connect import ActionConnect
+# from degiro_connector.trading.api import API
+# from degiro_connector.trading.actions.action_connect import ActionConnect
 from degiro_connector.trading.models.product_search import LookupRequest
 
 
@@ -18,55 +18,37 @@ class DegiroConnector:
         self.session_id = None
         self.prompt_for_2fa_callback = prompt_for_2fa_callback
 
-    def connect(self, username, password):
+    # Updated connect() method in JSON_Grabber.py
+    def connect(self, username: str, password: str) -> bool:
+        credentials = Credentials(
+            username=username,
+            password=password,
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+            # Critical browser header
+        )
+
+        self.trading_api = TradingAPI(credentials=credentials)
+
         try:
-            credentials = Credentials(
-                username=username,
-                password=password
-            )
+            # First connection attempt
+            connect_result = self.trading_api.connect()
+            if not connect_result:
+                raise DeGiroConnectionError("Initial connection failed")
 
-            self.trading_api = TradingAPI(credentials=credentials)
+            # Get fresh config table after connection
+            self.config_table = self.trading_api.get_config()
+            return True
 
-            # First, attempt to connect without 2FA
-            try:
-                self.trading_api.connect()
-                self.session_id = self.trading_api.connection_storage.session_id
-                logger.info("Connected successfully without 2FA")
-                return True
-            except DeGiroConnectionError as e:
-                # Check if the error is due to 2FA being required
-                if "2fa" in str(e).lower():
-                    # Prompt for 2FA code using the callback
-                    if self.prompt_for_2fa_callback:
-                        two_factor_code = self.prompt_for_2fa_callback()
-                        if two_factor_code:
-                            credentials.one_time_password = two_factor_code
-                            self.trading_api = TradingAPI(credentials=credentials)
-                            self.trading_api.connect()
-                            self.session_id = self.trading_api.connection_storage.session_id
-                            logger.info("Connected successfully with 2FA")
-                            return True
-                        else:
-                            logger.error("2FA code not provided")
-                            return False
-                    else:
-                        logger.error("2FA required but no prompt method provided")
-                        return False
-                else:
-                    raise  # Re-raise if it's not a 2FA-related error
-
-        except DeGiroConnectionError as degiro_error:
-            logger.error(f"Error logging in to Degiro: {degiro_error}")
-            if degiro_error.error_details:
-                logger.error(f"Degiro error details: {degiro_error.error_details}")
-        except ConnectionError as connection_error:
-            logger.error(f"ConnectionError: {connection_error}")
-
-        return False
+        except DeGiroConnectionError as e:
+            if "2fa" in str(e).lower() and self.prompt_for_2fa_callback:
+                code = self.prompt_for_2fa_callback()
+                if code:
+                    credentials.one_time_password = code
+                    self.trading_api = TradingAPI(credentials=credentials)
+                    return self.trading_api.connect()
+            return False
 
     def prompt_for_2fa(self):
-        # This method should be implemented in the GUI to prompt the user for the 2FA code
-        # For now, we'll use a simple input (you should replace this with a GUI prompt)
         return input("Enter your 2FA code: ")
 
     def disconnect(self):
@@ -76,10 +58,38 @@ class DegiroConnector:
 
     def get_company_profile(self, isin: str) -> Dict[str, Any]:
         try:
-            profile = self.trading_api.get_company_profile(product_isin=isin)
-            return profile.dict() if profile else {}
+            if not hasattr(self, 'config_table') or self.config_table is None:
+                raise AttributeError("config_table is not initialized. Call connect() first.")
+            profile_url = self.config_table.get("refinitivCompanyProfileUrl")
+            response = self.trading_api.request(
+                url=f"{profile_url}/{isin}", method="GET"
+            )
+            return response.json() if response.status_code == 200 else {}
         except Exception as e:
-            logger.error(f"Error fetching company profile: {str(e)}")
+            logger.error(f"Profile error: {str(e)}")
+            return {}
+
+    def get_company_ratios(self, isin: str) -> Dict[str, Any]:
+        try:
+            # Defensive check: ensure config_table is initialized
+            if not hasattr(self, 'config_table') or self.config_table is None:
+                raise AttributeError("config_table is not initialized. Call connect() first.")
+
+            ratios_url = self.config_table.get("refinitivCompanyRatiosUrl")
+            if not ratios_url:
+                raise ValueError("refinitivCompanyRatiosUrl not found in config_table.")
+
+            response = self.trading_api.request(
+                url=f"{ratios_url}/{isin}",
+                method="GET"
+            )
+            if response.status_code == 200:
+                return response.json()
+            else:
+                logger.error(f"Failed to fetch ratios for {isin}: HTTP {response.status_code}")
+                return {}
+        except Exception as e:
+            logger.error(f"Ratios error: {str(e)}")
             return {}
 
     def fetch_data(self, isin_codes: List[str]) -> Dict[str, Dict[str, Any]]:
@@ -91,8 +101,6 @@ class DegiroConnector:
             }
         return results
 
-    def get_company_ratios(self, isin: str, raw: bool = True) -> Dict[str, Any]:
-        return self.trading_api.get_company_ratios(product_isin=isin, raw=raw)
 
     def search_companies(self, query: str, limit: int = 10) -> List[Dict[str, Any]]:
         product_request = LookupRequest(

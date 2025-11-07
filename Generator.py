@@ -31,90 +31,207 @@ api_key = os.getenv('PERPLEXITY_API_KEY')
 
 
 class DataProcessor:
+    METRIC_MAP = {
+        'revenue_per_share': ['AREVPS', 'TTMREVPS', 'MRQREVPS', 'LFYREVPS'],
+        'eps': ['AEPSXCLXOR', 'TTMEPS', 'MRQEPS', 'LFYEPS'],
+        'book_value_per_share': ['ABVPS', 'TTMBVPS', 'MRQBVPS', 'LFYBVPS'],
+        'cash_per_share': ['ACSHPS', 'TTMCSHPS', 'MRQCSHPS', 'LFYCSHPS'],
+        'free_cash_flow_per_share': ['TTMFCFSHR', 'MRQFCFSHR', 'LFYFCFSHR', 'FCFPS'],
+        'pe_ratio': ['APEEXCLXOR', 'TTMPE', 'MRQPE', 'LFYPE'],
+        'price_to_sales': ['APR2REV', 'TTMPR2REV', 'MRQPR2REV', 'LFYPR2REV'],
+        'price_to_book': ['APRICE2BK', 'TTMPRICE2BK', 'MRQPRICE2BK', 'LFYPRICE2BK'],
+        'price_to_cash_flow': ['TTMPRCFPS', 'APRFCFPS', 'MRQPRCFPS', 'LFYPRCFPS'],
+        'price_to_free_cash_flow': ['APRFCFPS', 'TTMPRFCFPS', 'MRQPRFCFPS', 'LFYPRFCFPS'],
+        'operating_margin': ['TTMOPMGN', 'AOPMGNPCT', 'MRQOPMGN', 'LFYOPMGN'],
+        'net_profit_margin': ['TTMNPMGN', 'ANPMGNPCT', 'MRQNPMGN', 'LFYNPMGN'],
+        'gross_margin': ['AGROSMGN', 'TTMGROSMGN', 'MRQGROSMGN', 'LFYGROSMGN'],
+        'free_cash_flow_margin': ['Focf2Rev_TTM', 'AFocf2Rev', 'MRQFocf2Rev', 'LFYFocf2Rev']
+    }
+
     def __init__(self, json_data):
         self.raw_data = json_data
         self.processed_data = {}
+        self.isin = self._extract_isin()
 
-    def get_ratio_value(self, target_id):
-        def search_dict(d):
-            if isinstance(d, dict):
-                if d.get('id') == target_id:
-                    return d.get('value')
-                for value in d.values():
-                    result = search_dict(value)
-                    if result is not None:
-                        return result
-            elif isinstance(d, list):
-                for item in d:
-                    result = search_dict(item)
-                    if result is not None:
-                        return result
-            return None
-
-        result = search_dict(self.raw_data)
-        if result is None:
-            logger.warning(f"Value not found for {target_id}")
-            return None
+    def _extract_isin(self):
+        """Safely extract ISIN from raw data structure"""
         try:
-            return float(result)
-        except ValueError:
-            return result
+            if isinstance(self.raw_data, dict):
+                return next(iter(self.raw_data))
+            elif isinstance(self.raw_data, list) and len(self.raw_data) > 0:
+                return self.raw_data[0].get('isin')
+            return 'UNKNOWN'
+        except Exception as e:
+            logger.error(f"ISIN extraction error: {str(e)}")
+            return 'UNKNOWN'
+
+    def _search_metric(self, target_ids):
+        """Enhanced metric search with path tracking"""
+
+        def search_with_path(data, path=[]):
+            if isinstance(data, dict):
+                # Check for direct match
+                if 'id' in data and data['id'] in target_ids:
+                    return data.get('value'), data['id'], path + [data['id']]
+                # Recursive search
+                for k, v in data.items():
+                    result = search_with_path(v, path + [k])
+                    if result:
+                        return result
+            elif isinstance(data, list):
+                for i, item in enumerate(data):
+                    result = search_with_path(item, path + [f'[{i}]'])
+                    if result:
+                        return result
+            return (None, None, [])
+
+        # Search both profile and ratios sections
+        for section in ['ratios', 'profile']:
+            section_data = self.raw_data.get(self.isin, {}).get(section, {})
+            value, found_id, path = search_with_path(section_data)
+            if value is not None:
+                try:
+                    # Handle numeric values with commas
+                    if isinstance(value, str):
+                        value = value.replace(',', '')
+                    return float(value), found_id
+                except (ValueError, TypeError) as e:
+                    logger.warning(f"Value conversion failed for {found_id}: {value} ({str(e)})")
+                    return value, found_id
+
+        logger.warning(f"Metric not found: {target_ids} in {self.isin}")
+        return (None, None)
+
+    def _get_period(self, metric_id):
+        """Improved period detection with fallback"""
+        period_map = {
+            'A': ('Annual', 1),
+            'TTM': ('Trailing 12 Months', 3),
+            'MRQ': ('Most Recent Quarter', 3),
+            'LFY': ('Last Fiscal Year', 3)
+        }
+
+        if not metric_id:
+            return 'N/A'
+
+        # Try different prefix lengths
+        for length in [3, 4, 2]:
+            prefix = metric_id[:length]
+            if prefix in period_map:
+                return period_map[prefix][0]
+
+        # Fallback to first character
+        return period_map.get(metric_id[0], ('N/A',))[0]
 
     def process_data(self):
+        """Main processing method with enhanced validation"""
         try:
+            if not self.raw_data:
+                raise ValueError("Empty raw data provided")
+
             self.process_company_overview()
             self.calculate_financial_metrics()
             self.calculate_valuation_ratios()
             self.calculate_efficiency_metrics()
+            self._validate_output()
         except Exception as e:
-            logger.error(f"Error processing data: {e}")
+            logger.error(f"Data processing failed: {str(e)}")
+            raise
+
+    def _validate_output(self):
+        """Ensure required metrics exist"""
+        required_sections = ['financial_metrics', 'valuation_ratios', 'efficiency_metrics']
+        for section in required_sections:
+            if not self.processed_data.get(section):
+                raise ValueError(f"Missing critical section: {section}")
 
     def process_company_overview(self):
+        """Robust company overview processing"""
         try:
-            isin = next(iter(self.raw_data))
-            profile_data = self.raw_data[isin]['profile'].get('data', {})
-            contacts = profile_data.get('contacts', {})
+            company_data = self.raw_data.get(self.isin, {})
+            profile = company_data.get('profile', {}).get('data', {})
+            contacts = profile.get('contacts', {})
+
             self.processed_data['company_overview'] = {
-                'legal_name': contacts.get('NAME') or f"Unknown Company ({isin})",
-                # ... (rest of the fields)
+                'legal_name': contacts.get('NAME', f"Unknown Company ({self.isin})"),
+                'isin': self.isin,
+                'sector': profile.get('sector', 'N/A'),
+                'industry': profile.get('industry', 'N/A'),
+                'country': contacts.get('COUNTRY', 'N/A'),
+                'website': contacts.get('WEBSITE', 'N/A'),
+                'description': profile.get('description', 'N/A')[:500] + '...'  # Truncate long descriptions
             }
         except Exception as e:
-            logger.error(f"Error processing company overview: {str(e)}")
+            logger.error(f"Company overview error: {str(e)}")
             self.processed_data['company_overview'] = {
-                'legal_name': f"Unknown Company ({isin})",
-                # ... (rest of the fields with 'N/A' values)
+                'legal_name': f"Unknown Company ({self.isin})",
+                'isin': self.isin,
+                'sector': 'N/A',
+                'industry': 'N/A',
+                'country': 'N/A',
+                'website': 'N/A',
+                'description': 'N/A'
             }
 
     def calculate_financial_metrics(self):
+        """Financial metrics with value validation"""
         logger.info("Calculating financial metrics...")
-        self.processed_data['financial_metrics'] = {
-            'revenue_per_share': (self.get_ratio_value('AREVPS'), 'LFY'),
-            'eps': (self.get_ratio_value('AEPSXCLXOR'), 'LFY'),
-            'book_value_per_share': (self.get_ratio_value('ABVPS'), 'LFY'),
-            'cash_per_share': (self.get_ratio_value('ACSHPS'), 'LFY'),
-            'free_cash_flow_per_share': (self.get_ratio_value('TTMFCFSHR'), 'TTM')
-        }
+        metrics = {}
+        for key in ['revenue_per_share', 'eps', 'book_value_per_share',
+                    'cash_per_share', 'free_cash_flow_per_share']:
+            value, found_id = self._search_metric(self.METRIC_MAP[key])
+            period = self._get_period(found_id)
+
+            # Validate reasonable value ranges
+            if value is not None:
+                if key.endswith('_per_share') and value < 0:
+                    logger.warning(f"Negative value for {key}: {value}")
+                    value = None
+                elif key == 'eps' and abs(value) > 1000:  # Unrealistic EPS values
+                    logger.warning(f"Suspicious EPS value: {value}")
+                    value = None
+
+            metrics[key] = (value, period)
+        self.processed_data['financial_metrics'] = metrics
 
     def calculate_valuation_ratios(self):
+        """Valuation ratios with sanity checks"""
         logger.info("Calculating valuation metrics...")
-        self.processed_data['valuation_ratios'] = {
-            'pe_ratio': (self.get_ratio_value('APEEXCLXOR'), 'LFY'),
-            'price_to_sales': (self.get_ratio_value('APR2REV'), 'LFY'),
-            'price_to_book': (self.get_ratio_value('APRICE2BK'), 'LFY'),
-            'price_to_cash_flow': (self.get_ratio_value('TTMPRCFPS') or self.get_ratio_value('APRFCFPS'), 'TTM/LFY'),
-            'price_to_free_cash_flow': (
-            self.get_ratio_value('APRFCFPS') or self.get_ratio_value('TTMPRFCFPS'), 'LFY/TTM')
-        }
+        ratios = {}
+        for key in ['pe_ratio', 'price_to_sales', 'price_to_book',
+                    'price_to_cash_flow', 'price_to_free_cash_flow']:
+            value, found_id = self._search_metric(self.METRIC_MAP[key])
+            period = self._get_period(found_id)
+
+            # Validate ratio ranges
+            if value is not None:
+                if key == 'pe_ratio' and (value < 0 or value > 1000):
+                    logger.warning(f"Unusual P/E ratio: {value}")
+                elif value < 0:
+                    logger.warning(f"Negative ratio for {key}: {value}")
+                    value = None
+
+            ratios[key] = (value, period)
+        self.processed_data['valuation_ratios'] = ratios
 
     def calculate_efficiency_metrics(self):
+        """Efficiency metrics with percentage handling"""
         logger.info("Calculating efficiency metrics...")
-        self.processed_data['efficiency_metrics'] = {
-            'operating_margin': (self.get_ratio_value('TTMOPMGN') or self.get_ratio_value('AOPMGNPCT'), 'TTM/LFY'),
-            'net_profit_margin': (self.get_ratio_value('TTMNPMGN') or self.get_ratio_value('ANPMGNPCT'), 'TTM/LFY'),
-            'gross_margin': (self.get_ratio_value('AGROSMGN') or self.get_ratio_value('TTMGROSMGN'), 'LFY/TTM'),
-            'free_cash_flow_margin': (
-            self.get_ratio_value('Focf2Rev_TTM') or self.get_ratio_value('AFocf2Rev'), 'TTM/LFY')
-        }
+        metrics = {}
+        for key in ['operating_margin', 'net_profit_margin',
+                    'gross_margin', 'free_cash_flow_margin']:
+            value, found_id = self._search_metric(self.METRIC_MAP[key])
+            period = self._get_period(found_id)
+
+            # Convert percentages to decimals
+            if value is not None and isinstance(value, str) and '%' in value:
+                try:
+                    value = float(value.strip('%')) / 100
+                except ValueError:
+                    value = None
+
+            metrics[key] = (value, period)
+        self.processed_data['efficiency_metrics'] = metrics
 
 
 class APIHandler:
@@ -196,7 +313,6 @@ class APIHandler:
 
     # Getters and setters
 
-
     def get_individual_prompt(self):
         return self._individual_prompt
 
@@ -235,7 +351,7 @@ class APIHandler:
 
             data = {
                 "model": "llama-3.1-sonar-small-128k-online",
-                # "model": "llam a-3.1-70b-instruct",
+                # "model": "llama a-3.1-70b-instruct",
 
                 "messages": [{
                     "role": "user",
