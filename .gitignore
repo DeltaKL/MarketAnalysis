@@ -1,3 +1,40 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+myenv/
+
+# PyCharm project files
+.idea/
+
+# Distribution/build folders
+build/
+dist/
+
+# Node modules if any (not needed in your Python repo)
+node_modules/
+
+# TCL and TK folders (likely dependencies)
+tcl/
+tcl8.6/
+tk8.6/
+
+# Log files
+*.log
+
+# Environment variables
 .env
-Generator_old.py
-JSON_Grabber_old.py
+
+# Package manager files (ignore lock file if not needed)
+package-lock.json
+package.json
+
+# Spec files and hooks you don't want in version control
+*.spec
+hook-degiro_connector.py
+hook-tkinter.py
+
+# PDFs or other large data/reports if not required in repo
+*.pdf

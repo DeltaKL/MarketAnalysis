@@ -123,7 +123,7 @@ class ToolTip:
             self.tooltip = None
 
 
-class ETFDesigner:
+class ETFDesigner:  
     def __init__(self, master, degiro_connector):
         self.window = tk.Toplevel(master)
         self.window.title("Custom ETF Designer")
