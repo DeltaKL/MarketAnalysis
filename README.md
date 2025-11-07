@@ -36,11 +36,6 @@ HTTP/REST: DeGiro endpoints + Perplexity API
 
 PDF: FPDF
 
-Optional: python‑dotenv for environment variables
-
-Project structure
-Adjust to your repo.
-
 app/
 
 gui.py # UI components (login, search, selections)
@@ -57,24 +52,12 @@ config.py # Settings, model choices, constants
 
 assets/ # Icons, screenshots, sample outputs
 
-.env.example # Template for environment variables
-
 requirements.txt # Dependencies
 
 README.md # This file
 
-LICENSE # Optional
-
-Security and credentials
-
-Do not commit real credentials or API keys.
-
-Use a local .env file and keep it out of Git (see .gitignore).
-
 DeGiro sessions/2FA: follow DeGiro’s security requirements.
 
-.env.example
-Copy to .env and fill with your values.
 PERPLEXITY_API_KEY=pk-xxxxxxxxxxxxxxxxxxxxxxxx
 DEGIRO_USERNAME=your_username
 DEGIRO_PASSWORD=your_password
